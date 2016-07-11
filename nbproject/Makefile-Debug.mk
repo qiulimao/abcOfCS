@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/dijkstra.o \
+	${OBJECTDIR}/floyd.o \
 	${OBJECTDIR}/graphic.o \
 	${OBJECTDIR}/main.o
 
@@ -62,6 +64,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datastructure: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datastructure ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/dijkstra.o: dijkstra.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dijkstra.o dijkstra.c
+
+${OBJECTDIR}/floyd.o: floyd.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/floyd.o floyd.c
 
 ${OBJECTDIR}/graphic.o: graphic.c 
 	${MKDIR} -p ${OBJECTDIR}

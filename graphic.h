@@ -31,9 +31,12 @@ extern "C" {
 #define INFINITE 8080
 
 typedef struct map{
-	int vertex_num;
-	int matric[MAX_SIZE][MAX_SIZE];
+    int vertex_num;
+    int matric[MAX_SIZE][MAX_SIZE];
 }map;
+typedef int dimession2[MAX_SIZE][MAX_SIZE];
 
-extern void get_random_graph(map *g);
-extern void tranverse_graph(map *g);
+void get_random_graph(map *g);
+void tranverse_graph(map *g);
+void tranverse_two_matric(dimession2 *matric,int size);
+int init_graph(map *g,int size);

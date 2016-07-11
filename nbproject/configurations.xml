@@ -4,6 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>dijkstra.h</itemPath>
+      <itemPath>flody.h</itemPath>
       <itemPath>graphic.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,6 +15,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>dijkstra.c</itemPath>
+      <itemPath>floyd.c</itemPath>
       <itemPath>graphic.c</itemPath>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -38,6 +42,14 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="dijkstra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="dijkstra.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="flody.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="floyd.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="graphic.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="graphic.h" ex="false" tool="3" flavor2="0">
@@ -65,6 +77,14 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="dijkstra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="dijkstra.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="flody.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="floyd.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="graphic.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="graphic.h" ex="false" tool="3" flavor2="0">

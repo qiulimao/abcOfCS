@@ -11,17 +11,35 @@
  * Created on July 11, 2016, 9:29 AM
  */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "graphic.h"
+#include "flody.h"
+#include "dijkstra.h"
 /*
  * 
  */
+
+
+
 void main() {
 
     map g;
-    g.vertex_num = 10;
+    Pathmatric P;
+    DistanceTable  D;
+    init_graph(&g,10);
     get_random_graph(&g);
+    
+    printf("the original random graph\n");
     tranverse_graph(&g);
+    
+    find_shortest_path_by_floyd(&g,&P,&D);
+    printf("the shorest path matric\n");
+    
+    tranverse_two_matric(&P,10);
+    printf("the distance matric\n");
+    tranverse_two_matric(&D,10);
+    show_shortest_path(&P,&D,1,8);
 }
 
