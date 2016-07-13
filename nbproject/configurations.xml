@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>aov.h</itemPath>
       <itemPath>dijkstra.h</itemPath>
       <itemPath>flody.h</itemPath>
       <itemPath>graphic.h</itemPath>
@@ -15,6 +16,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>aov.c</itemPath>
       <itemPath>dijkstra.c</itemPath>
       <itemPath>floyd.c</itemPath>
       <itemPath>graphic.c</itemPath>
@@ -42,6 +44,10 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="aov.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="aov.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="dijkstra.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="dijkstra.h" ex="false" tool="3" flavor2="0">
@@ -77,6 +83,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="aov.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="aov.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="dijkstra.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="dijkstra.h" ex="false" tool="3" flavor2="0">
