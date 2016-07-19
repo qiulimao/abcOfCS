@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=datastructure
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/datastructure
+CND_ARTIFACT_NAME_Debug=abcofcs
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/abcofcs
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=datastructure.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/datastructure.tar
+CND_PACKAGE_NAME_Debug=abcofcs.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/abcofcs.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=datastructure
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/datastructure
+CND_ARTIFACT_NAME_Release=abcofcs
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/abcofcs
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=datastructure.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/datastructure.tar
+CND_PACKAGE_NAME_Release=abcofcs.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/abcofcs.tar
 #
 # include compiler specific variables
 #

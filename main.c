@@ -54,10 +54,16 @@ void main() {
     
     ArrayList list,*l;
     l = &list;
-    generate_random_list(l,10);
-    tranverse_arraylist(l);
-    SelectSort(l);
-    printf("\n");
-    tranverse_arraylist(l);
+    generate_random_list(l,60);
+    printf("the origin list:\n");
+    tranverse_arraylist(l,0);
+    //SelectSort(l);
+    //StraightInsertSort(l);
+    //PartSortByStaightInsert(l,1,2);
+    //ShellSort(l);
+    HeapSort(l);
+    printf("the sort result is %d (0 is wrong,1 is right)\n",TestSortResult(l));
+    printf("the sorted list:\n");
+    tranverse_arraylist(l,0);
 }
 

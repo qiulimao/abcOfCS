@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=datastructure
+PROJECTNAME=abcOfCS
 
 # Active Configuration
 DEFAULTCONF=Debug

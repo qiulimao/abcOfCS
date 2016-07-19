@@ -61,11 +61,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datastructure
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/abcofcs
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datastructure: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/abcofcs: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datastructure ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/abcofcs ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/aov.o: aov.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -103,7 +103,7 @@ ${OBJECTDIR}/rank.o: rank.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datastructure
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/abcofcs
 
 # Subprojects
 .clean-subprojects:
