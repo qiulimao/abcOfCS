@@ -83,7 +83,8 @@ void main() {
     //StraightInsertSort(l);
     //PartSortByStaightInsert(l,1,2);
     //ShellSort(l);
-    MergingSort(l);
+    //MergingSort(l);
+    QuickSort(l);
     //HeapSort(l);
     printf("the sort result is %d (0 is wrong,1 is right)\n",TestSortResult(l));
     printf("the sorted list:\n");

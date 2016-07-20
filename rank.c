@@ -169,7 +169,7 @@ void ShellSort(ArrayList *L)
 {
     int step,i,reduce_factor;
 
-    reduce_factor = 3;    
+    reduce_factor = 2;    
     step = L->length / reduce_factor;
 
     while(step>1)
@@ -297,9 +297,58 @@ void MergingSort(ArrayList *L)
     
 }
 
+/**
+ * 选取一个关键字，然后将它放到一个位置，是的左边的值都比他小，右边的值都比他大并返回他的位置
+ * @param L
+ * @param low
+ * @param high
+ */
+int __partion(ArrayList *L,int low,int high)
+{
+    int center_val;
+    center_val = L->r[low];
+    
+    while(low < high)
+    {
+        //有没有可能 low不加，high不减的情况?
+        while(low < high && L->r[high] >= center_val)
+        {
+            high -- ;
+        }
+        swap(L,low,high);
+        while(low < high && L->r[low] <= center_val) 
+        {
+            low ++;
+        }
+        swap(L,low,high);
+    }
+    
+    return high;
+    
+}
+
+void __Qsort(ArrayList *L,int low,int high)
+{
+    int middle;
+    if(low < high)
+    {
+        middle = __partion(L,low,high);
+        __Qsort(L,low,middle-1);
+        __Qsort(L,middle+1,high);
+    }
+}
+
+/**
+ * 通过一趟排序将要排序的数据分割成独立的两部分，
+ * 其中一部分的所有数据都比另外一部分的所有数据都要小，
+ * 然后再按此方法对这两部分数据分别进行快速排序，
+ * 整个排序过程可以递归进行，
+ * 以此达到整个数据变成有序序列。
+ * @param L
+ */
 void QuickSort(ArrayList *L)
 {
-    
+    __Qsort(L,1,L->length);
 }
 
 /**
