@@ -27,7 +27,29 @@
  * 
  */
 
+void subcall(int *a,int size)
+{
+    int i;
+    for(i = 0;i<size;i++)
+    {
+        a[i] = i*i;
+    }
+}
 
+
+void see_the_test_result()
+{
+    int a[10];
+    int i;
+    subcall(&a,10);
+    
+    printf("\n");
+    for(i=0;i<10;i++)
+        printf("%5d",a[i]);
+    
+    printf("\n");
+    a == &a ? printf("a==&a[0]") : printf("a != &a[0]");
+}
 
 void main() {
 
@@ -61,9 +83,12 @@ void main() {
     //StraightInsertSort(l);
     //PartSortByStaightInsert(l,1,2);
     //ShellSort(l);
-    HeapSort(l);
+    MergingSort(l);
+    //HeapSort(l);
     printf("the sort result is %d (0 is wrong,1 is right)\n",TestSortResult(l));
     printf("the sorted list:\n");
     tranverse_arraylist(l,0);
+    
+    //see_the_test_result();
 }
 

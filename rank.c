@@ -237,9 +237,63 @@ void HeapSort(ArrayList *L)
 
 
 
+void __merge(int from[],int to[],int start,int middle,int end)
+{
+    int pointer1,pointer2,index;
+    pointer1 = start;
+    pointer2 = middle + 1;
+    index=start;  //在这个位置上犯了错误，导致我调试了很久无果。
+    while(pointer1 <= middle && pointer2 <=end)
+    {
+        if(from[pointer1] <= from[pointer2])
+        {
+            to[index] = from[pointer1];
+            index ++;
+            pointer1 ++;
+        }
+        else
+        {
+            to[index] = from[pointer2];
+            index ++;
+            pointer2 ++;            
+        }
+    }
+    
+    while(pointer1 <= middle)
+    {
+       to[index] = from[pointer1];
+       index ++;
+       pointer1 ++;       
+    }
+    while(pointer2 <= end)
+    {
+       to[index] = from[pointer2];
+       index ++;
+       pointer2 ++;           
+    }
 
+}
+
+void __msort(int origin[],int swap[],int start,int end)
+{
+    int m;
+    int temp[LIST_SIZE+1];
+    if(start == end)
+    {
+        swap[start]=origin[start];
+        return;
+    }
+    m = (start + end)/2;
+    
+    __msort(origin,temp,start,m);
+    __msort(origin,temp,m+1,end);
+    __merge(temp,swap,start,m,end);
+    
+}
 void MergingSort(ArrayList *L)
 {
+    
+    __msort(L->r,L->r,1,L->length);
     
 }
 
@@ -257,10 +311,10 @@ int TestSortResult(ArrayList *L)
 {
    int order,current_order;
    int i;
-   order = L->r[2] > L->r[1] ? 1 : 0;
+   order = L->r[2] >= L->r[1] ? 1 : 0;
    for(i=2;i<=L->length;i++)
    {
-       current_order = L->r[i] > L->r[i-1] ? 1 : 0;
+       current_order = L->r[i] >= L->r[i-1] ? 1 : 0;
        
        if(current_order != order)
            return 0;
